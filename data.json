@@ -1,0 +1,39 @@
+[
+    {
+        "name":"WATER DAMAGE",
+        "img":"https://ibb.co/M58Bcx8",
+        "price":"20$",
+        "description": "Water damage describes various possible losses caused by water intruding where it will enable attack of a material or system by destructive processes such as rotting of wood, mold growth, bacteria growth, rusting of steel, swelling of composite woods, de-laminating of materials such as plywood, short-circuiting of electrical devices, etc. The damage may be imperceptibly slow and minor such as water spots that could eventually mar a surface, or it may be instantaneous and catastrophic such as burst pipes and flooding. However fast it occurs, water damage is a major contributor to loss of property. An insurance policy may or may not cover the costs associated with water damage and the process of water damage restoration. While a common cause of residential water damage is often the failure of a sump pump, many homeowner's insurance policies do not cover the associated costs without an addendum which adds to the monthly premium of the policy. Often the verbiage of this addendum is similar to."
+    },
+    {
+        "name":"UNLOCKING",
+        "img":"https://ibb.co/377LRhW",
+        "price":"10$",
+        "description":"A lock screen is a computer user interface element used by various operating systems. They regulate immediate access to a device by requiring the user to perform a certain action in order to receive access, such as entering a password, using a certain button combination, or performing a certain gesture using a device's touchscreen. There are various authentication methods to get past the lock screen, with the most popular and common ones being personal identification numbers (PINs), the Android pattern lock, and biometrics (e.g. Touch ID and facial recognition). Depending on the operating system and device type, a lock screen can range from a simple login screen, to an overview screen with the current date and time, weather, recent notifications, playback controls for media being played in the background (typically music), shortcuts to applications (such as the camera), and optionally, the contact information of the device's owner (which can be used in the event that the device is lost or stolen, or during a medical emergency)."
+
+    },
+    {
+        "name":"WIFI PROBLEMS",
+        "img":"https://ibb.co/9GNhG4q",
+        "price":"10$",
+        "description":"Wi-Fi  is a family of wireless network protocols, based on the IEEE 802.11 family of standards, which are commonly used for local area networking of devices and Internet access, allowing nearby digital devices to exchange data by radio waves. These are the most widely used computer networks in the world, used globally in home and small office networks to link desktop and laptop computers, tablet computers, smartphones, smart TVs, printers, and smart speakers together and to a wireless router to connect them to the Internet, and in wireless access points in public places like coffee shops, hotels, libraries and airports to provide visitors with Internet access for their mobile devices. Wi-Fi is a trademark of the non-profit Wi-Fi Alliance, which restricts the use of the term Wi-Fi Certified to products that successfully complete interoperability certification testing.[3][4][5] As of 2017, the Wi-Fi Alliance consisted of more than 800 companies from around the world.[6] As of 2019, over 3.05 billion Wi-Fi enabled devices are shipped globally each year."
+    },
+    {
+        "name":"LCD REPAIR / REPLACEMENT",
+        "img":"https://ibb.co/hdLNRf3",
+        "price":"10$",
+        "description":"Screen Replacment Replacment The screen replacement refers to when jut the glass is cracked. The underlying picture should be perfect with no blines, blotches, pressure points, or off color. Touch should respond 100% even though the glass is cracked.LCD Replacement Replacement If the image has any imperfection, then you need the LCD replacement repair. This includes but is not limited to: dark spots, no image visible, lines in the picture, discoloration, colors being off, pressure points, white perisitent bright spots, rainbow image, etc. The LCD is what lies beneath the glass and is similar to your LCD TV in your living room. Touch Repair Even if the picture looks perfect but touch is intermitted or non responsive in some parts of the screen"
+    },
+    {
+        "name":"BATTERY CHARGING / REPLACEMENT",
+        "img":"https://ibb.co/HK7PnyD",
+        "price":"20$",
+        "description":"A battery charger, or recharger, is a device that stores energy in a battery by running an electric current through it. The charging protocol (how much voltage or current for how long, and what to do when charging is complete) depends on the size and type of the battery being charged. Some battery types have high tolerance for overcharging (i.e., continued charging after the battery has been fully charged) and can be recharged by connection to a constant voltage source or a constant current source, depending on battery type. Simple chargers of this type must be manually disconnected at the end of the charge cycle. Other battery types use a timer to cut off when charging should be complete. Other battery types cannot withstand over-charging, becoming damaged (reduced capacity, reduced lifetime), over heating or even exploding. The charger may have temperature or voltage sensing circuits and a microprocessor controller to safely adjust the charging current and voltage, determine the state of charge, and cut off at the end of charge.Chargers may elevate the output voltage proportionally with current to compensate for impedance in the wires."
+    },
+    {
+        "name":"SOFTWARE INSTALLATION",
+        "img":"https://ibb.co/D5Jjc7H",
+        "price":"10$",
+        "description":"Software installation refers to the large scale distribution of software and application on an organizational level. Administrators are frequently bombarded with numerous software installation requests, and have to validate those requests individually and authorize the software installation. Traditionally, a software is placed in a Network Share and the end users can install the software manually. As organizations are ever-expanding, this method soon becomes unsustainable. This is where software installation tools come in handy."
+    }
+]
