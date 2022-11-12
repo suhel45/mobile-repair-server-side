@@ -24,6 +24,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run(){
     try{
         const userCollection  = client.db("mobile").collection("services")
+        const userComment  = client.db("mobile").collection("comments")
         app.get('/service',async(req,res)=>{
             const query = {};
             const cursor = userCollection.find(query);
@@ -35,6 +36,24 @@ async function run(){
             const query = {_id:ObjectId(id)}
             const result = await userCollection.findOne(query)
             res.send(result)
+        })
+        app.post('/users',async(req,res)=>{
+            const user = req.body;
+            const resul = await userComment.insertOne(user)
+            console.log(user);
+        })
+        app.get('/comment',async(req,res)=>{
+            const query = {};
+            const cursor = userComment.find(query);
+            const rest = await cursor.toArray();
+            res.send(rest);
+        })
+        app.get('/comment/:id',async(req,res)=>{
+            let id = req.params.id;
+           let query = {id:id}
+           const cursor = userComment.find(query)
+           let resu = await cursor.toArray();
+            res.send(resu);
         })
     }
     finally{
