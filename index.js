@@ -1,6 +1,10 @@
 const express = require('express');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const cors = require('cors');
+require('dotenv').config();
+
+
+console.log(process.env.DB_USERS)
 
 
 
@@ -15,8 +19,6 @@ app.use(express.json());
 app.get('/',(req,res)=>{
     res.send('hello node')
 })
-//user: mobiledb
-//password: YuBXDeCkhzDJfXNM
 
 const uri = "mongodb+srv://mobiledb:YuBXDeCkhzDJfXNM@cluster0.dwtnipt.mongodb.net/?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
