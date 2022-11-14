@@ -57,6 +57,12 @@ async function run(){
            let resu = await cursor.toArray();
             res.send(resu);
         })
+        app.delete('/comment/:id',async(req,res)=>{
+            const id = req.params.id;
+            const query = {_id:ObjectId(id)};
+            const cmt = await userComment.deleteOne(query);
+            res.send(cmt);
+        })
     }
     finally{
 
