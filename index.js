@@ -4,7 +4,7 @@ const cors = require('cors');
 require('dotenv').config();
 
 
-console.log(process.env.DB_USERS)
+console.log(process.env.DB_USER)
 
 
 
@@ -20,7 +20,7 @@ app.get('/',(req,res)=>{
     res.send('hello node')
 })
 
-const uri = "mongodb+srv://mobiledb:YuBXDeCkhzDJfXNM@cluster0.dwtnipt.mongodb.net/?retryWrites=true&w=majority";
+const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.dwtnipt.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
 async function run(){
