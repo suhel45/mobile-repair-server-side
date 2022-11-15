@@ -2,6 +2,7 @@ const express = require('express');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 const cors = require('cors');
 require('dotenv').config();
+const jwt = require('jsonwebtoken');
 
 
 console.log(process.env.DB_USER)
@@ -22,7 +23,18 @@ app.get('/',(req,res)=>{
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.dwtnipt.mongodb.net/?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-
+const  verifyJWT = (req,res,next)=>{
+    const authHeader = req.headers.authorizatio;
+    if(!authHeader){
+        res.send({message:'unauthorized access'})
+    }
+    const token = authHeader.split(' ')[1];
+    jwt.verify(token,process.env.ACCESS_TOKEN,function(err,decoded){
+        if(err){res.send({message:'unauthorized access'})}
+        req.decoded=decoded;
+        next();
+    })
+}
 async function run(){
     try{
         const userCollection  = client.db("mobile").collection("services")
@@ -44,7 +56,7 @@ async function run(){
             const resul = await userComment.insertOne(user)
             console.log(user);
         })
-        app.get('/comment',async(req,res)=>{
+        app.get('/comment',verifyJWT,async(req,res)=>{
             const query = {};
             const cursor = userComment.find(query);
             const rest = await cursor.toArray();
@@ -57,11 +69,17 @@ async function run(){
            let resu = await cursor.toArray();
             res.send(resu);
         })
-        app.delete('/comment/:id',async(req,res)=>{
+        app.delete('/users/:id',async(req,res)=>{
             const id = req.params.id;
             const query = {_id:ObjectId(id)};
             const cmt = await userComment.deleteOne(query);
+            console.log(id)
             res.send(cmt);
+        })
+        app.post('/jwt',(req,res)=>{
+            const usr = req.body;
+            const token = jwt.sign(usr,process.env.ACCESS_TOKEN,{expiresIn:'1h'})
+            res.send({token})
         })
     }
     finally{
